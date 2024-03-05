@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge de Alura encriptador</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+<header>
+        <h1 id="Titulo principal">El encriptador de Anubis</h1>
+</header>
+
+<div class="conteiner"> 
+    <div class="encriptar">
+        <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto que deseas encriptar"></textarea>
+        <h2 id="titulo-mensaje">Ingresa el texto que deseas encriptar</h2>
+        <input type="button" class="btn-copiar" value="Copiar" type="button" onclick="copiar()">
+        <textarea name="mensaje" class="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingresa el texto que deseas desencriptar"></textarea>
+            </div>
+       
+          
+    </div>
+              <div class="botones">
+              <input type="button" class="btn-encriptar" value="Encriptar" type="button" onclick="encriptar()">
+              <input type="button" class="btn-desencriptar" value="Desencriptar" type="button" onclick="desencriptar()">                 
+          
+        </div>
+        <div class="terminos">
+            <p>Solo minúsculas y sin acentos.</p>   
+        </div>
+   
+</div>
+<script src="script.js"></script>  
+</body>  
+</html>

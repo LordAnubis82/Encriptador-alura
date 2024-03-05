@@ -1,0 +1,2 @@
+ background-image: url("/imagenes/anubis-dios-guerrero 3.jpg");
+    background-size: cover;
