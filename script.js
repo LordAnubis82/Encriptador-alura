@@ -10,43 +10,40 @@ const textoCifrado = [
         ];
  const texto = document.getElementById("texto");
  const mensaje = document.getElementById("mensaje"); 
- const caracteresValidos = "qwertyuiopñlkjhgfdsazxcvbnm ";
+ //const caracteresValidos = "qwertyuiopñlkjhgfdsazxcvbnm ";
 //caracteres validos
-function validarTexto(txt){
-for (let i = 0; i < caracteresValidos.length; i++){
-if(!txt.includes(caracteresValidos[i])){
-    console.log("hola");
-    texto.style.color="aqua";
-return false;
+function validarTexto(txt) {
+    const caracteresValidos = "qwertyuiopñlkjhgfdsazxcvbnm 0123456789 ";
 
+    for (let i = 0; i < txt.length; i++) {
+        if (!caracteresValidos.includes(txt[i])) {
+            alert("Atencion, solo se aceptan minúsculas y números.");
+            return false;
+        }
+    }
 
-    break;
-}
-else{
     return true;
 }
-
-}
-texto.style.color="gold";
-}
 // Funcion encriptar
-function encriptar() {    
-             let textoEncriptar = texto.value;
-             
-       
-        for(i=0; i<textoCifrado.length; i++){
-            // código a ejecutar en cada iteración
-           //comparar los valres de strig con los del array
-               textoEncriptar = textoEncriptar.replaceAll(textoCifrado[i][0],textoCifrado[i][1]);
-               //remplaso texto por texto cifrado
-          }
-               //console.log(texto);
-   
-                   //pasar al otro tex area
-   
-                mensaje.value = textoEncriptar;   
-          } 
-       
+function encriptar() {
+
+    let textoEncriptar = texto.value;
+    if (!validarTexto(textoEncriptar)) {
+        return; // Detener la encriptación si el texto no es válido
+    }
+    for (let i = 0; i < textoCifrado.length; i++) {
+        // código a ejecutar en cada iteración
+        //comparar los valres de strig con los del array
+        textoEncriptar = textoEncriptar.replaceAll(textoCifrado[i][0], textoCifrado[i][1]);
+        //remplaso texto por texto cifrado
+    }
+    //console.log(texto);
+
+    //pasar al otro tex area
+
+    mensaje.value = textoEncriptar;
+}
+// Funcion encriptar       
 
        //copiar el texto
 function copiar() {
@@ -75,3 +72,4 @@ function desencriptar(){
           texto.value = textoDesencriptar;   
 
 }
+
