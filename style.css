@@ -125,11 +125,43 @@ h2{
     font-weight: 400;
     box-shadow: 5% black;
 }
+.copyright{
+    display: flex;
+    position: absolute;
+    top: 98%;
+    font-size: 120%;
+    color: gold;
+    font-weight: bold;
+}
 
 @media screen and (min-width: 280px )and (max-width: 600px) {
-    .btn-copiar{
-
+    body{
+        width: auto;
+        background-image: url(/imagenes/anubis-dios-guerrero\ 3.jpg);
     }
+    header{
+        width: auto;
+    }
+    .conteiner{
+        width: auto;
+        
+    }
+    .btn-copiar, .btn-encriptar, .btn-desencriptar{
+        width: auto;
+        height: auto;
+    }
+    #titulo-mensaje{
+        top: 55%;
+    }
+.terminos{
+    top: 60%;
+    right: 3%;
+    text-align: center;
+}
+.copyright{
+    position: absolute;
+    top: 97%;
+}
 }
 
 
